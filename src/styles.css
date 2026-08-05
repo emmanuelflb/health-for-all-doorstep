@@ -61,13 +61,13 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   /* MarketDoctors brand tokens */
-  --color-earth-950: oklch(0.25 0.03 55);
-  --color-earth-900: oklch(0.35 0.04 55);
-  --color-clay-600: oklch(0.58 0.14 45);
-  --color-clay-50: oklch(0.99 0.015 80);
-  --color-leaf-700: oklch(0.55 0.15 145);
-  --color-canvas: oklch(0.99 0.005 60);
-  --color-surface: oklch(0.97 0.005 60);
+  --color-earth-950: oklch(0.2646 0.0233 66.52);
+  --color-earth-900: oklch(0.3487 0.0271 59.87);
+  --color-clay-600: oklch(0.5553 0.1455 48.99);
+  --color-clay-50: oklch(0.9869 0.0213 95.33);
+  --color-leaf-700: oklch(0.5273 0.1371 150.09);
+  --color-canvas: oklch(0.9848 0.0012 107.98);
+  --color-surface: oklch(0.9699 0.0012 107.95);
   --font-display: "Fraunces", serif;
   --font-body: "Public Sans", sans-serif;
 }
