@@ -198,7 +198,7 @@ function Index() {
               width={1200}
               height={600}
               className="w-full h-full object-cover"
-              priority="true"
+              loading="eager"
             />
           </div>
         </div>
