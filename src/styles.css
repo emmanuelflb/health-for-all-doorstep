@@ -60,14 +60,14 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* MarketDoctors brand tokens */
-  --color-earth-950: oklch(0.2646 0.0233 66.52);
-  --color-earth-900: oklch(0.3487 0.0271 59.87);
-  --color-clay-600: oklch(0.5553 0.1455 48.99);
-  --color-clay-50: oklch(0.9869 0.0213 95.33);
-  --color-leaf-700: oklch(0.5273 0.1371 150.09);
-  --color-canvas: oklch(0.9848 0.0012 107.98);
-  --color-surface: oklch(0.9699 0.0012 107.95);
+  /* MarketDoctors brand tokens — blue theme */
+  --color-earth-950: oklch(0.2600 0.0520 255.0);
+  --color-earth-900: oklch(0.3400 0.0620 255.0);
+  --color-clay-600: oklch(0.5600 0.1650 250.0);
+  --color-clay-50: oklch(0.9760 0.0140 245.0);
+  --color-leaf-700: oklch(0.5000 0.1380 245.0);
+  --color-canvas: oklch(0.9860 0.0035 240.0);
+  --color-surface: oklch(0.9690 0.0070 240.0);
   --font-display: "Fraunces", serif;
   --font-body: "Public Sans", sans-serif;
 }
