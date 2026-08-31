@@ -15,6 +15,8 @@ import {
   Video,
   Building2,
   ArrowRight,
+  Check,
+
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-marketdoctors.jpg";
@@ -94,7 +96,7 @@ const services = [
     icon: Video,
     title: "Telemedicine",
     description:
-      "Virtual consultations that connect patients to qualified practitioners from anywhere.",
+      "Làáfíá: call a doctor 24/7 from your phone, with lab tests and medications delivered — from under ₦1,000 a month.",
   },
   {
     icon: Building2,
@@ -170,6 +172,9 @@ function Index() {
             </a>
             <a href="#services" className="hover:text-clay-600 transition-colors">
               Services
+            </a>
+            <a href="#laafia" className="hover:text-clay-600 transition-colors">
+              Làáfíá Telemedicine
             </a>
             <a href="#focus" className="hover:text-clay-600 transition-colors">
               Focus Areas
@@ -359,7 +364,84 @@ function Index() {
         </div>
       </section>
 
+      {/* Làáfíá Telemedicine */}
+      <section id="laafia" className="py-20 px-6 bg-clay-50/50">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-widest text-clay-600 mb-4 block">
+              Làáfíá by Market Doctors
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-medium text-earth-950 text-balance mb-4">
+              See a doctor anytime, anywhere.
+            </h2>
+            <p className="text-earth-900/80 text-pretty mb-8 max-w-[48ch]">
+              Consult real doctors from your phone. No queues. No stress.
+              Làáfíá is our telemedicine service, built for individuals,
+              families and small businesses across Nigeria.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="mailto:telemedicine.marketdoctor@gmail.com?subject=L%C3%A0%C3%A1f%C3%AD%C3%A1%20Telemedicine%20Enquiry"
+                className="inline-flex items-center justify-center bg-leaf-700 text-white text-sm font-medium py-3 px-6 rounded-full hover:bg-leaf-800 transition-colors"
+              >
+                Enquire About Làáfíá
+              </a>
+              <a
+                href="tel:+2349065222356"
+                className="inline-flex items-center justify-center bg-white text-earth-950 text-sm font-medium py-3 px-6 rounded-full ring-1 ring-black/5 hover:bg-surface transition-colors"
+              >
+                Call 0906 522 2356
+              </a>
+            </div>
+            <p className="text-xs text-earth-900/50 mt-4">
+              Email telemedicine.marketdoctor@gmail.com · Tel 0906 522 2356,
+              0911 409 6686
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-white rounded-[24px] p-8 ring-1 ring-black/5">
+              <h3 className="font-display text-xl text-earth-950 mb-5">
+                Benefits
+              </h3>
+              <ul className="space-y-4 text-sm text-earth-900/75">
+                {[
+                  "Call a doctor 24/7",
+                  "Personalized lab tests and medications",
+                  "Less than ₦1,000 per month",
+                ].map((b) => (
+                  <li key={b} className="flex gap-3">
+                    <span className="mt-0.5 flex-shrink-0 size-5 rounded-full bg-clay-600/10 flex items-center justify-center text-clay-600">
+                      <Check className="size-3" strokeWidth={2.5} />
+                    </span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-white rounded-[24px] p-8 ring-1 ring-black/5">
+              <h3 className="font-display text-xl text-earth-950 mb-5">
+                Who can benefit?
+              </h3>
+              <ul className="space-y-3 text-sm font-medium text-earth-950">
+                {["Individuals", "Families", "SMEs", "Associations"].map(
+                  (w) => (
+                    <li
+                      key={w}
+                      className="bg-clay-50 rounded-full px-4 py-2"
+                    >
+                      {w}
+                    </li>
+                  ),
+                )}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Focus Ailments Strip */}
+
       <section id="focus" className="py-12 border-y border-earth-950/10 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-earth-900/40 mb-8">
