@@ -12,10 +12,13 @@ import {
   Eye,
   Baby,
   HeartPulse,
+  Video,
+  Building2,
   ArrowRight,
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-marketdoctors.jpg";
+import logoAsset from "@/assets/marketdoctors-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
