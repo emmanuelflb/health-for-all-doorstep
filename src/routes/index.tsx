@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   Stethoscope,
   Truck,
@@ -16,7 +17,8 @@ import {
   Building2,
   ArrowRight,
   Check,
-
+  Menu,
+  X,
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-marketdoctors.jpg";
@@ -96,7 +98,7 @@ const services = [
     icon: Video,
     title: "Telemedicine",
     description:
-      "Làáfíá: call a doctor 24/7 from your phone, with lab tests and medications delivered — from under ₦1,000 a month.",
+      "Làáfíá: call a doctor 24/7 from your phone, with lab tests and medications delivered — ₦1,000 a month.",
   },
   {
     icon: Building2,
@@ -149,43 +151,89 @@ const partners = [
 ];
 
 function Index() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="bg-canvas text-earth-900 font-body antialiased">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-sm border-b border-earth-950/5 px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3">
+        <div className="max-w-7xl mx-auto grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:flex-wrap sm:justify-between">
+          <a href="#" className="flex min-w-0 items-center gap-3">
             <img
               src={logoAsset.url}
               alt="MarketDoctors logo"
               width={40}
               height={40}
-              className="size-10 rounded-full object-cover"
+              className="size-10 shrink-0 rounded-full object-cover"
             />
-            <span className="font-display font-semibold text-xl tracking-tight text-clay-600">
+            <span className="truncate font-display font-semibold text-xl tracking-tight text-clay-600">
               MarketDoctors
             </span>
           </a>
-          <div className="hidden md:flex gap-8 text-sm font-medium text-earth-900/70">
-            <a href="#story" className="hover:text-clay-600 transition-colors">
-              Our Story
-            </a>
-            <a href="#services" className="hover:text-clay-600 transition-colors">
-              Services
-            </a>
-            <a href="#laafia" className="hover:text-clay-600 transition-colors">
-              Làáfíá Telemedicine
-            </a>
-            <a href="#focus" className="hover:text-clay-600 transition-colors">
-              Focus Areas
+
+          <div className="flex items-center gap-3 sm:order-last">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden inline-flex items-center justify-center size-10 rounded-full ring-1 ring-black/5 bg-white hover:bg-surface transition-colors"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? (
+                <X className="size-5 text-earth-950" />
+              ) : (
+                <Menu className="size-5 text-earth-950" />
+              )}
+            </button>
+            <a
+              href="#contact"
+              className="hidden sm:inline-flex items-center justify-center bg-leaf-700 text-white text-sm font-medium py-2 px-5 rounded-full ring-1 ring-leaf-700 hover:bg-leaf-800 transition-colors"
+            >
+              Support Our Work
             </a>
           </div>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center bg-leaf-700 text-white text-sm font-medium py-2 px-5 rounded-full ring-1 ring-leaf-700 hover:bg-leaf-800 transition-colors"
+
+          <div
+            className={`${
+              mobileMenuOpen ? "flex" : "hidden"
+            } md:flex flex-col md:flex-row gap-4 md:gap-8 text-sm font-medium text-earth-900/70 w-full md:w-auto sm:order-first`}
           >
-            Support Our Work
-          </a>
+            <a
+              href="#story"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-clay-600 transition-colors py-2 md:py-0"
+            >
+              Our Story
+            </a>
+            <a
+              href="#services"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-clay-600 transition-colors py-2 md:py-0"
+            >
+              Services
+            </a>
+            <a
+              href="#laafia"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-clay-600 transition-colors py-2 md:py-0"
+            >
+              Làáfíá Telemedicine
+            </a>
+            <a
+              href="#focus"
+              onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-clay-600 transition-colors py-2 md:py-0"
+            >
+              Focus Areas
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="sm:hidden inline-flex items-center justify-center bg-leaf-700 text-white text-sm font-medium py-2 px-5 rounded-full ring-1 ring-leaf-700 hover:bg-leaf-800 transition-colors"
+            >
+              Support Our Work
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -408,7 +456,7 @@ function Index() {
                 {[
                   "Call a doctor 24/7",
                   "Personalized lab tests and medications",
-                  "Less than ₦1,000 per month",
+                  "₦1,000 a month",
                 ].map((b) => (
                   <li key={b} className="flex gap-3">
                     <span className="mt-0.5 flex-shrink-0 size-5 rounded-full bg-clay-600/10 flex items-center justify-center text-clay-600">
