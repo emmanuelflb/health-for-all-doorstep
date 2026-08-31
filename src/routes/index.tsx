@@ -96,7 +96,7 @@ const services = [
     icon: Video,
     title: "Telemedicine",
     description:
-      "Virtual consultations that connect patients to qualified practitioners from anywhere.",
+      "Làáfíá: call a doctor 24/7 from your phone, with lab tests and medications delivered — from under ₦1,000 a month.",
   },
   {
     icon: Building2,
@@ -172,6 +172,9 @@ function Index() {
             </a>
             <a href="#services" className="hover:text-clay-600 transition-colors">
               Services
+            </a>
+            <a href="#laafia" className="hover:text-clay-600 transition-colors">
+              Làáfíá Telemedicine
             </a>
             <a href="#focus" className="hover:text-clay-600 transition-colors">
               Focus Areas
