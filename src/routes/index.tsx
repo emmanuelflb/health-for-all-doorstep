@@ -90,6 +90,18 @@ const services = [
     description:
       "Efficient sourcing and distribution of essential medical supplies.",
   },
+  {
+    icon: Video,
+    title: "Telemedicine",
+    description:
+      "Virtual consultations that connect patients to qualified practitioners from anywhere.",
+  },
+  {
+    icon: Building2,
+    title: "Corporate & Formal Sector Care",
+    description:
+      "Workplace health programmes, staff screening and retainership for organisations in the formal sector.",
+  },
 ];
 
 const focusAilments = [
