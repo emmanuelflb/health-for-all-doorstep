@@ -152,9 +152,18 @@ function Index() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-sm border-b border-earth-950/5 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="font-display font-semibold text-xl tracking-tight text-clay-600">
-            MarketDoctors
-          </div>
+          <a href="#" className="flex items-center gap-3">
+            <img
+              src={logoAsset.url}
+              alt="MarketDoctors logo"
+              width={40}
+              height={40}
+              className="size-10 rounded-full object-cover"
+            />
+            <span className="font-display font-semibold text-xl tracking-tight text-clay-600">
+              MarketDoctors
+            </span>
+          </a>
           <div className="hidden md:flex gap-8 text-sm font-medium text-earth-900/70">
             <a href="#story" className="hover:text-clay-600 transition-colors">
               Our Story
