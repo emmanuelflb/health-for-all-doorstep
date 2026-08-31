@@ -193,8 +193,9 @@ function Index() {
             </h1>
             <p className="text-base md:text-lg text-earth-900/80 text-pretty max-w-[56ch] mx-auto mb-10">
               MarketDoctors provides affordable medical care to Nigerians in the
-              informal sector, rural areas and slums — quality health services
-              that reach your doorstep without disturbing your daily bread.
+              informal sector, rural areas and slums — and we cater to the
+              formal sector too, with telemedicine available for care wherever
+              you are.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
