@@ -335,7 +335,8 @@ function Index() {
             </h2>
             <p className="text-canvas/60 max-w-[48ch] text-pretty">
               We do not just treat illnesses; we integrate health into the
-              rhythm of daily economic activities.
+              rhythm of daily economic activities — serving both the informal
+              and formal sectors, in person and through telemedicine.
             </p>
           </div>
 
