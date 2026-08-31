@@ -12,10 +12,13 @@ import {
   Eye,
   Baby,
   HeartPulse,
+  Video,
+  Building2,
   ArrowRight,
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-marketdoctors.jpg";
+import logoAsset from "@/assets/marketdoctors-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -87,6 +90,18 @@ const services = [
     description:
       "Efficient sourcing and distribution of essential medical supplies.",
   },
+  {
+    icon: Video,
+    title: "Telemedicine",
+    description:
+      "Virtual consultations that connect patients to qualified practitioners from anywhere.",
+  },
+  {
+    icon: Building2,
+    title: "Corporate & Formal Sector Care",
+    description:
+      "Workplace health programmes, staff screening and retainership for organisations in the formal sector.",
+  },
 ];
 
 const focusAilments = [
@@ -137,9 +152,18 @@ function Index() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-sm border-b border-earth-950/5 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="font-display font-semibold text-xl tracking-tight text-clay-600">
-            MarketDoctors
-          </div>
+          <a href="#" className="flex items-center gap-3">
+            <img
+              src={logoAsset.url}
+              alt="MarketDoctors logo"
+              width={40}
+              height={40}
+              className="size-10 rounded-full object-cover"
+            />
+            <span className="font-display font-semibold text-xl tracking-tight text-clay-600">
+              MarketDoctors
+            </span>
+          </a>
           <div className="hidden md:flex gap-8 text-sm font-medium text-earth-900/70">
             <a href="#story" className="hover:text-clay-600 transition-colors">
               Our Story
@@ -169,8 +193,9 @@ function Index() {
             </h1>
             <p className="text-base md:text-lg text-earth-900/80 text-pretty max-w-[56ch] mx-auto mb-10">
               MarketDoctors provides affordable medical care to Nigerians in the
-              informal sector, rural areas and slums — quality health services
-              that reach your doorstep without disturbing your daily bread.
+              informal sector, rural areas and slums — and we cater to the
+              formal sector too, with telemedicine available for care wherever
+              you are.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -310,7 +335,8 @@ function Index() {
             </h2>
             <p className="text-canvas/60 max-w-[48ch] text-pretty">
               We do not just treat illnesses; we integrate health into the
-              rhythm of daily economic activities.
+              rhythm of daily economic activities — serving both the informal
+              and formal sectors, in person and through telemedicine.
             </p>
           </div>
 
