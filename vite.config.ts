@@ -6,10 +6,15 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Static SPA output for shared/cPanel hosting: no Node server, no Cloudflare Worker.
+// The build emits a flat static folder with index.html at its root.
 export default defineConfig({
+  // Skip the Nitro server bundle entirely — nothing server-side is deployed.
+  nitro: false,
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+    // SPA mode: render a static shell at build time, hydrate + route on the client.
+    spa: { enabled: true },
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
+    pages: [{ path: "/" }],
   },
 });
