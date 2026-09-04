@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-marketdoctors.jpg";
-import logoAsset from "@/assets/marketdoctors-logo.jpg.asset.json";
+import logoImage from "@/assets/marketdoctors-logo.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -160,7 +160,7 @@ function Index() {
         <div className="max-w-7xl mx-auto grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:flex-wrap sm:justify-between">
           <a href="#" className="flex min-w-0 items-center gap-3">
             <img
-              src={logoAsset.url}
+              src={logoImage}
               alt="MarketDoctors logo"
               width={40}
               height={40}
