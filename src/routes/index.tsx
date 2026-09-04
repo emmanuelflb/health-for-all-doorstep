@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-marketdoctors.jpg";
-import logoAsset from "@/assets/marketdoctors-logo.jpg.asset.json";
+import logoImage from "@/assets/marketdoctors-logo.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
